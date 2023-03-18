@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.CartFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:background="@color/orengeprimary"
+           android:textColor="@color/white"
+           android:text="Cart"
+           android:paddingLeft="15dp"
+           android:paddingVertical="8dp"
+           android:textSize="20sp"
+           android:id="@+id/carttoobar_id"
+           android:textStyle="bold"
+           />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/cartrecyclerView_Id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/carttoobar_id"
+            android:layout_above="@+id/total" />
+
+        <RelativeLayout
+            android:id="@+id/total"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/cartcontinue_btnId"
+            android:background="#B0E3DDDD"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="12dp">
+
+            <TextView
+                android:id="@+id/t1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Subtotal"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/t1"
+                android:text="(without taxes)"
+                android:textColor="#E96E6C6C"
+                android:textSize="15sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/carttotal_Id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="R.s 0.0"
+                android:textColor="@color/teal_700"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/cartcontinue_btnId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/orengeprimary"
+            android:text="Continue" />
+    </RelativeLayout>
+</FrameLayout>
